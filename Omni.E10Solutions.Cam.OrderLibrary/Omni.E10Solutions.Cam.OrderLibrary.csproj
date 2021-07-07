@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4664E2BC-34A1-47AD-9634-E91CAC4013A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Omni.E10Solutions.Cam.OrderLibrary</RootNamespace>
+    <AssemblyName>Omni.E10Solutions.Cam.OrderLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.ServiceModel">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Epicor.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Customer">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Part">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Part.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.SalesOrder">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.SalesOrder.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheService.cs" />
+    <Compile Include="CamductJob\CamductJobCollection.cs" />
+    <Compile Include="CamductJob\CamductJob.cs" />
+    <Compile Include="CamductJob\CamductJobBuilder.cs" />
+    <Compile Include="Common\Exceptions\CannotConvertToTypeException.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\Files\Field.cs" />
+    <Compile Include="Common\Files\DirectoryParameter.cs" />
+    <Compile Include="Common\Epicor\CustomerError.cs" />
+    <Compile Include="Order\NoCustomerFoundInCacheException.cs" />
+    <Compile Include="Order\NoFirstOLineException.cs" />
+    <Compile Include="Order\NoPartFoundInCacheException.cs" />
+    <Compile Include="Order\Order.cs" />
+    <Compile Include="Order\OrderFactory.cs" />
+    <Compile Include="Order\ConvertJobsToOrdersService.cs" />
+    <Compile Include="Epicor\Epicor10Cache.cs" />
+    <Compile Include="Epicor\Epicor10.cs" />
+    <Compile Include="Files\FileTypeO.cs" />
+    <Compile Include="Common\Exceptions\NotEnoughColumnsException.cs" />
+    <Compile Include="Common\Files\ImpersonateUser.cs" />
+    <Compile Include="Common\Services\GrabFilesService.cs" />
+    <Compile Include="Common\Services\MoveFilesService.cs" />
+    <Compile Include="Common\Files\IField.cs" />
+    <Compile Include="Common\Services\InvalidateJobFilesService.cs" />
+    <Compile Include="Order\IOrder.cs" />
+    <Compile Include="OrderImportProcess.cs" />
+    <Compile Include="Common\Epicor\PartError.cs" />
+    <Compile Include="Order\OrderMapException.cs" />
+    <Compile Include="PersistOrderService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Files\TypeOData.cs" />
+    <Compile Include="Common\Files\RawFileDataDictionary.cs" />
+    <Compile Include="Common\Files\RawJobDataDictionary.cs" />
+    <Compile Include="Epicor\UdService.cs" />
+    <Compile Include="Order\TypeODataConverter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

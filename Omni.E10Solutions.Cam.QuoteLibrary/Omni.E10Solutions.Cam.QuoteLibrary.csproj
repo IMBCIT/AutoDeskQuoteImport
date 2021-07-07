@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F0FE675-9F00-471D-B367-ADACEFEB8678}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Omni.E10Solutions.Cam.QuoteLibrary</RootNamespace>
+    <AssemblyName>Omni.E10Solutions.Cam.QuoteLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.ServiceModel">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Epicor.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Customer">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Part">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Part.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.PartCostSearch">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.PartCostSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Quote">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Quote.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.QuoteAsm">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.QuoteAsm.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UD03">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Ice.Contracts.BO.UD03.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Services\Deprecated\ReadFilesService.cs" />
+    <Compile Include="Services\FileServices.cs" />
+    <Compile Include="ServiceFactories\EpicorParameter.cs" />
+    <Compile Include="Services\PersistQuoteLineService.cs" />
+    <Compile Include="Services\ConvertRollupService.cs" />
+    <Compile Include="Exceptions\CannotConvertToTypeException.cs" />
+    <Compile Include="Field\FieldBuilder.cs" />
+    <Compile Include="Field\FieldFactory.cs" />
+    <Compile Include="Field\FieldFailCondition.cs" />
+    <Compile Include="Field\FieldCannotBeLessThanZeroException.cs" />
+    <Compile Include="Field\FieldCannotBeBlankException.cs" />
+    <Compile Include="Field\FieldCannotBeGreaterThanValueException.cs" />
+    <Compile Include="Field\FieldCannotBeLessThanValueException.cs" />
+    <Compile Include="Field\Field.cs" />
+    <Compile Include="Field\IField.cs" />
+    <Compile Include="Exceptions\ReadCamFileModeInvalidException.cs" />
+    <Compile Include="Services\IPersistQuoteService.cs" />
+    <Compile Include="ServiceFactories\CamConversionMode.cs" />
+    <Compile Include="ServiceFactories\EpicorServiceFactory.cs" />
+    <Compile Include="Services\IConvertJobsToQuotesService.cs" />
+    <Compile Include="Quote\IQuoteFactory.cs" />
+    <Compile Include="Quote\RolledUpQuoteFactory.cs" />
+    <Compile Include="Rollup\RollupLine.cs" />
+    <Compile Include="Rollup\RollupLineQuery.cs" />
+    <Compile Include="Rollup\RollupMtlData.cs" />
+    <Compile Include="Rollup\RollupOprData.cs" />
+    <Compile Include="Rollup\Rollup.cs" />
+    <Compile Include="Exceptions\SellingExpectedQtyCannotBeZeroException.cs" />
+    <Compile Include="Services\CacheService.cs" />
+    <Compile Include="CamductJob\CamductJob.cs" />
+    <Compile Include="CamductJob\CamductJobBuilder.cs" />
+    <Compile Include="CamductJob\CamductJobCollection.cs" />
+    <Compile Include="CamductJob\CamductJobCustomerId.cs" />
+    <Compile Include="CamductJob\CamductJobPartNumber.cs" />
+    <Compile Include="Services\ConvertLineItemService.cs" />
+    <Compile Include="Epicor\CustomerError.cs" />
+    <Compile Include="Epicor\Epicor10.cs" />
+    <Compile Include="Epicor\Epicor10Cache.cs" />
+    <Compile Include="Exceptions\NoFirstOLineException.cs" />
+    <Compile Include="Services\UdService.cs" />
+    <Compile Include="Services\Deprecated\GrabFilesService.cs" />
+    <Compile Include="Files\CorruptedFileTypeA.cs" />
+    <Compile Include="Files\CorruptedFileTypeO.cs" />
+    <Compile Include="Files\CorruptedFileTypeS.cs" />
+    <Compile Include="Files\FileTypeA.cs" />
+    <Compile Include="Files\FileTypeO.cs" />
+    <Compile Include="Files\FileTypeS.cs" />
+    <Compile Include="Exceptions\NoCustomerFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NoPartCostFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NoPartFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NotEnoughColumnsException.cs" />
+    <Compile Include="Exceptions\QuoteMapException.cs" />
+    <Compile Include="Epicor\PartCostError.cs" />
+    <Compile Include="Epicor\PartError.cs" />
+    <Compile Include="Quote\IQuote.cs" />
+    <Compile Include="Quote\MtlData.cs" />
+    <Compile Include="Quote\OprData.cs" />
+    <Compile Include="Quote\Quote.cs" />
+    <Compile Include="Quote\QuoteFactory.cs" />
+    <Compile Include="CamductJob\RawFileDataDictionary.cs" />
+    <Compile Include="CamductJob\RawJobDataDictionary.cs" />
+    <Compile Include="Services\Deprecated\MoveFilesService.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Services\ImpersonateUser.cs" />
+    <Compile Include="Services\Deprecated\InvalidateJobFilesService.cs" />
+    <Compile Include="Services\PersistQuoteRollupService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuoteImportProcess.cs" />
+    <Compile Include="Quote\TypeADataConverter.cs" />
+    <Compile Include="Quote\TypeODataConverter.cs" />
+    <Compile Include="Quote\TypeSDataConverter.cs" />
+    <Compile Include="Files\DirParameter.cs" />
+    <Compile Include="Files\TypeAData.cs" />
+    <Compile Include="Files\TypeOData.cs" />
+    <Compile Include="Files\TypeSData.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

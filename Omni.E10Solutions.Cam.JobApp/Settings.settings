@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Omni.E10Solutions.Cam.JobApp" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AnaSourceDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ANAJ</Value>
+    </Setting>
+    <Setting Name="AnaArchivesDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\ANAJ\Archive</Value>
+    </Setting>
+    <Setting Name="AnaErrorDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\ANAJ\Invalid</Value>
+    </Setting>
+    <Setting Name="AnaInProcessDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\ANAJ\InProcess</Value>
+    </Setting>
+    <Setting Name="DucSourceDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCJ</Value>
+    </Setting>
+    <Setting Name="DucArchivesDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCJ\Archive</Value>
+    </Setting>
+    <Setting Name="DucErrorDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCJ\Invalid</Value>
+    </Setting>
+    <Setting Name="DucInProcessDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCJ\InProcess</Value>
+    </Setting>
+    <Setting Name="EveSourceDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\EVEJ</Value>
+    </Setting>
+    <Setting Name="EveArchivesDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\EVEJ\Archive</Value>
+    </Setting>
+    <Setting Name="EveErrorDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\EVEJ\Invalid</Value>
+    </Setting>
+    <Setting Name="EveInProcessDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\EVEJ\InProcess</Value>
+    </Setting>
+    <Setting Name="SacSourceDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\SACJ</Value>
+    </Setting>
+    <Setting Name="SacArchivesDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\SACJ\Archive</Value>
+    </Setting>
+    <Setting Name="SacErrorDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\SACJ\Invalid</Value>
+    </Setting>
+    <Setting Name="SacInProcessDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\SACJ\InProcess</Value>
+    </Setting>
+    <Setting Name="AppServerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://OMSVEPIAZU902/E10Pilot</Value>
+    </Setting>
+    <Setting Name="LoadPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

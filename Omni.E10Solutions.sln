@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.QuoteLibrary", "Omni.E10Solutions.Cam.QuoteLibrary\Omni.E10Solutions.Cam.QuoteLibrary.csproj", "{7F0FE675-9F00-471D-B367-ADACEFEB8678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.QuoteApp", "Omni.E10Solutions.Cam.QuoteApp\Omni.E10Solutions.Cam.QuoteApp.csproj", "{D17543CE-33C4-49B8-8DC9-A749D456641C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.JobLibrary", "Omni.E10Solutions.Cam.JobLibrary\Omni.E10Solutions.Cam.JobLibrary.csproj", "{513D7F17-D84D-4419-90D0-33293536C081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.JobApp", "Omni.E10Solutions.Cam.JobApp\Omni.E10Solutions.Cam.JobApp.csproj", "{2C1D7BEE-3855-4207-992F-F19A5B80C7CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.OrderApp", "Omni.E10Solutions.Cam.OrderApp\Omni.E10Solutions.Cam.OrderApp.csproj", "{0E0C03C1-67AE-4DC9-9138-C213178CD55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omni.E10Solutions.Cam.OrderLibrary", "Omni.E10Solutions.Cam.OrderLibrary\Omni.E10Solutions.Cam.OrderLibrary.csproj", "{4664E2BC-34A1-47AD-9634-E91CAC4013A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F0FE675-9F00-471D-B367-ADACEFEB8678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0FE675-9F00-471D-B367-ADACEFEB8678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0FE675-9F00-471D-B367-ADACEFEB8678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0FE675-9F00-471D-B367-ADACEFEB8678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17543CE-33C4-49B8-8DC9-A749D456641C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17543CE-33C4-49B8-8DC9-A749D456641C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17543CE-33C4-49B8-8DC9-A749D456641C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17543CE-33C4-49B8-8DC9-A749D456641C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513D7F17-D84D-4419-90D0-33293536C081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513D7F17-D84D-4419-90D0-33293536C081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513D7F17-D84D-4419-90D0-33293536C081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513D7F17-D84D-4419-90D0-33293536C081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1D7BEE-3855-4207-992F-F19A5B80C7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1D7BEE-3855-4207-992F-F19A5B80C7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1D7BEE-3855-4207-992F-F19A5B80C7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1D7BEE-3855-4207-992F-F19A5B80C7CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0C03C1-67AE-4DC9-9138-C213178CD55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0C03C1-67AE-4DC9-9138-C213178CD55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0C03C1-67AE-4DC9-9138-C213178CD55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0C03C1-67AE-4DC9-9138-C213178CD55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4664E2BC-34A1-47AD-9634-E91CAC4013A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4664E2BC-34A1-47AD-9634-E91CAC4013A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4664E2BC-34A1-47AD-9634-E91CAC4013A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4664E2BC-34A1-47AD-9634-E91CAC4013A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BBDD4DC-DC88-4179-86FC-5669A8564F59}
+	EndGlobalSection
+EndGlobal

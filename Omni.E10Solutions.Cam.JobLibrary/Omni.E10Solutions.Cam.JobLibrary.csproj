@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{513D7F17-D84D-4419-90D0-33293536C081}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Omni.E10Solutions.Cam.JobLibrary</RootNamespace>
+    <AssemblyName>Omni.E10Solutions.Cam.JobLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.ServiceModel">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Epicor.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Customer">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.JobEntry">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.JobEntry.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.Part">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.Part.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Contracts.BO.PartCostSearch">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Erp.Contracts.BO.PartCostSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UD03">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Ice.Contracts.BO.UD03.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.1Client\Client\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Omni.E10Solutions.Cam.QuoteLibrary\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CamductJob\CamductJob.cs" />
+    <Compile Include="CamductJob\CamductJobBuilder.cs" />
+    <Compile Include="CamductJob\CamductJobCollection.cs" />
+    <Compile Include="CamductJob\CamductJobCustomerId.cs" />
+    <Compile Include="CamductJob\CamductJobPartNumber.cs" />
+    <Compile Include="CamductJob\RawFileDataDictionary.cs" />
+    <Compile Include="CamductJob\RawJobDataDictionary.cs" />
+    <Compile Include="Epicor\CustomerError.cs" />
+    <Compile Include="Epicor\Epicor10.cs" />
+    <Compile Include="Epicor\Epicor10Cache.cs" />
+    <Compile Include="Epicor\PartCostError.cs" />
+    <Compile Include="Epicor\PartError.cs" />
+    <Compile Include="Exceptions\CannotConvertToTypeException.cs" />
+    <Compile Include="Exceptions\NoCustomerFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NoFirstOLineException.cs" />
+    <Compile Include="Exceptions\NoPartCostFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NoPartFoundInCacheException.cs" />
+    <Compile Include="Exceptions\NotEnoughColumnsException.cs" />
+    <Compile Include="Exceptions\JobMapException.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Field\Field.cs" />
+    <Compile Include="Field\FieldBuilder.cs" />
+    <Compile Include="Field\FieldCannotBeBlankException.cs" />
+    <Compile Include="Field\FieldCannotBeGreaterThanValueException.cs" />
+    <Compile Include="Field\FieldCannotBeLessThanValueException.cs" />
+    <Compile Include="Field\FieldCannotBeLessThanZeroException.cs" />
+    <Compile Include="Field\FieldFactory.cs" />
+    <Compile Include="Field\FieldFailCondition.cs" />
+    <Compile Include="Field\IField.cs" />
+    <Compile Include="Files\CorruptedFileTypeA.cs" />
+    <Compile Include="Files\CorruptedFileTypeO.cs" />
+    <Compile Include="Files\CorruptedFileTypeS.cs" />
+    <Compile Include="Files\DirParameter.cs" />
+    <Compile Include="Files\FileTypeA.cs" />
+    <Compile Include="Files\FileTypeO.cs" />
+    <Compile Include="Files\FileTypeS.cs" />
+    <Compile Include="Files\TypeAData.cs" />
+    <Compile Include="Files\TypeOData.cs" />
+    <Compile Include="Files\TypeSData.cs" />
+    <Compile Include="Job\JobEntryFactory.cs" />
+    <Compile Include="Job\JobEntry.cs" />
+    <Compile Include="Job\IJobEntry.cs" />
+    <Compile Include="Job\MtlData.cs" />
+    <Compile Include="Job\OprData.cs" />
+    <Compile Include="Job\TypeADataConverter.cs" />
+    <Compile Include="Job\TypeODataConverter.cs" />
+    <Compile Include="Job\TypeSDataConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JobImportProcess.cs" />
+    <Compile Include="Services\CacheService.cs" />
+    <Compile Include="Services\ConvertJobsToJobEntriesService.cs" />
+    <Compile Include="Services\EpicorParameter.cs" />
+    <Compile Include="Services\GrabFilesService.cs" />
+    <Compile Include="Services\ImpersonateUser.cs" />
+    <Compile Include="Services\InvalidateJobFilesService.cs" />
+    <Compile Include="Services\MoveFilesService.cs" />
+    <Compile Include="Services\PersistJobEntryService.cs" />
+    <Compile Include="Services\UdService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

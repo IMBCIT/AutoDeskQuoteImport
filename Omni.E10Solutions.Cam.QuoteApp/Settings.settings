@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Omni.E10Solutions.Cam.QuoteApp" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AnaSourceDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\ANAQ</Value>
+    </Setting>
+    <Setting Name="AnaArchivesDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\ANAQ\Archive</Value>
+    </Setting>
+    <Setting Name="AnaErrorDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\ANAQ\Invalid</Value>
+    </Setting>
+    <Setting Name="DucSourceDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCH</Value>
+    </Setting>
+    <Setting Name="DucArchivesDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCH\Archive</Value>
+    </Setting>
+    <Setting Name="DucErrorDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCH\Invalid</Value>
+    </Setting>
+    <Setting Name="EveSourceDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\EVEQ</Value>
+    </Setting>
+    <Setting Name="EveArchivesDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\EVEQ\Archive</Value>
+    </Setting>
+    <Setting Name="EveErrorDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\EVEQ\Invalid</Value>
+    </Setting>
+    <Setting Name="SacSourceDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\SACQ</Value>
+    </Setting>
+    <Setting Name="SacArchivesDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\SACQ\Archive</Value>
+    </Setting>
+    <Setting Name="SacErrorDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\SACQ\Invalid</Value>
+    </Setting>
+    <Setting Name="AnaInProcessDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\ANAQ\InProcess</Value>
+    </Setting>
+    <Setting Name="DucInProcessDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\192.168.0.18\ZCam\DUCH\InProcess</Value>
+    </Setting>
+    <Setting Name="EveInProcessDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\EVEQ\InProcess</Value>
+    </Setting>
+    <Setting Name="SacInProcessDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\SACQ\InProcess</Value>
+    </Setting>
+    <Setting Name="AppServerUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">net.tcp://OMSVEPIAZU902/E10Pilot</Value>
+    </Setting>
+    <Setting Name="LoadPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\10.1.2.30\Epicor\ZCam\ROLLUP-PILOT\Quotes</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
